@@ -8,10 +8,13 @@ import image3 from '../images/image4.jpeg'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Carousel from 'react-bootstrap/Carousel';
-import carousel2 from '../images/carousel2.jpg'
+import carousel2 from '../images/WaterCan.jpeg'
 import carousel1 from '../images/carousel1.jpg'
-import carousel3 from '../images/carousel3.jpg'
+import carousel3 from '../images/juice.jpg'
 import Image from 'react-bootstrap/Image';
+import c1 from '../images/c1.png'
+import c3 from '../images/c3.png'
+import cText from '../images/carouselText.png'
 import '../index.css'
 
 export default function Home() {
@@ -21,22 +24,22 @@ export default function Home() {
       <Carousel>
       <Carousel.Item>
       <Image className='cImage' src={carousel1}/>
-        <Carousel.Caption className='carouselCaption'> 
-          <h3>Construction Machines</h3>
+        <Carousel.Caption className='carouselCaption col-sm'> 
+        <Image className='sm-4' src={c1} alt='cLable'/>
           <p>Avalibale for Rent All over Coimbatore</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item >
       <Image className='cImage' src={carousel2}/>
         <Carousel.Caption className='carouselCaption'>
-        <h3>Pure Drinking Water Supply</h3>
+        <Image className='col-sm-4' src={cText} alt='cLable'/>
           <p>Delivery Availbale in all over Coimbatore</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <Image className='cImage' src={carousel3}/>
         <Carousel.Caption className='carouselCaption'>
-          <h3>Third slide label</h3>
+        <Image src={c3} alt='cLable'/>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
@@ -45,10 +48,10 @@ export default function Home() {
     </Carousel>
       </div>
       <div className='homeProductDiv'>
-        <Row>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img className='cardImage' variant="top" src={image1} />
+        <Row className='container'>
+          <Col className='row'>
+            <Card style={{ width: '18rem' }} className='shadow bg-light col'>
+              <Card.Img className='img-thumbnail' variant="top" src={image1} />
               <Card.Body>
                 <Card.Title>Demolition Machine</Card.Title>
                 <Card.Text>
@@ -59,7 +62,7 @@ export default function Home() {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem' }} className='shadow bg-light col'>
               <Card.Img className='cardImage' variant="top" src={image2} />
               <Card.Body>
                 <Card.Title>Driller Machine</Card.Title>
@@ -71,7 +74,43 @@ export default function Home() {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem' }} className='shadow bg-light col'>
+              <Card.Img className='cardImage' variant="top" src={image3} />
+              <Card.Body>
+                <Card.Title>Grinding Machine</Card.Title>
+                <Card.Text>
+                Grinders are known for their robust performance, ergonomic design, and safety features, perfect for tasks such as cutting, grinding, and polishing.
+                </Card.Text>
+                <Button variant="primary">For Rent</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{ width: '18rem' }} className='shadow bg-light '>
+              <Card.Img className='cardImage' variant="top" src={image3} />
+              <Card.Body>
+                <Card.Title>Grinding Machine</Card.Title>
+                <Card.Text>
+                Grinders are known for their robust performance, ergonomic design, and safety features, perfect for tasks such as cutting, grinding, and polishing.
+                </Card.Text>
+                <Button variant="primary">For Rent</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{ width: '18rem' }} className='shadow bg-light '>
+              <Card.Img className='cardImage' variant="top" src={image3} />
+              <Card.Body>
+                <Card.Title>Grinding Machine</Card.Title>
+                <Card.Text>
+                Grinders are known for their robust performance, ergonomic design, and safety features, perfect for tasks such as cutting, grinding, and polishing.
+                </Card.Text>
+                <Button variant="primary">For Rent</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{ width: '18rem' }} className='shadow bg-light '>
               <Card.Img className='cardImage' variant="top" src={image3} />
               <Card.Body>
                 <Card.Title>Grinding Machine</Card.Title>

@@ -3,23 +3,34 @@ import { Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Image from 'react-bootstrap/Image';
+import logo from '../images/logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import '../index.css'
 
 
 export default function NavigationBar() {
   return (
     <div className='homeNaveBar'>
-      <Navbar expand="lg" className="navBarLogoDiv">
-      <Container className='navBarContainer'>
-        <Navbar.Brand className='navBarLogo' href="#">Shalom Traders</Navbar.Brand>
-      </Container>
-    </Navbar>
-      <Nav className='lg navBarDiv' justify variant="tabs">      
-        <NavLink className='navLink' to='/'>Home</NavLink>
-        <NavLink className='navLink' to='/about'>About</NavLink>
-        <NavLink className='navLink' to='/services'>Services</NavLink>
-        <NavLink className='navLink' to='/contact'>Contact us</NavLink>
-      </Nav>
+      <div className='logoDiv'>
+        <Image src={logo} alt='LogoImage' />
+      </div>
+      <div className='navBarDiv'>
+        <Nav id='basic-navbar-nav' className="justify-content-center navItems" activeKey="/home">
+          <Nav.Item >
+            <NavLink className='navLink' to='/'>Home</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink className='navLink' to='/about'>About</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink className='navLink' to='/services'>Services</NavLink>
+          </Nav.Item>
+          <Nav.Item>
+            <NavLink className='navLink' to='/contact'>Contact</NavLink>
+          </Nav.Item>
+        </Nav>
+      </div>
     </div>
   )
 }
