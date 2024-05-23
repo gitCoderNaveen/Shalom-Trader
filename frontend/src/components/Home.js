@@ -16,8 +16,16 @@ import c1 from '../images/c1.png'
 import c3 from '../images/c3.png'
 import cText from '../images/carouselText.png'
 import '../index.css'
+import Login from './Login';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from './Auth';
 
 export default function Home() {
+  const auth = useAuth()
+  const navigate = useNavigate()
+  const handleFunction =()=>{
+    navigate('/login')
+  }
   return (
     <div>
       <div className='carouserlDivision'>
@@ -57,7 +65,7 @@ export default function Home() {
                 <Card.Text>
                   Quick Demolition of your old building with handy.
                 </Card.Text>
-                <Button variant="primary">For Rent</Button>
+                <Button variant="primary" onClick={handleFunction}>For Rent</Button>
               </Card.Body>
             </Card>
           </Col>

@@ -7,9 +7,11 @@ import Image from 'react-bootstrap/Image';
 import logo from '../images/logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../index.css'
+import { useAuth } from './Auth';
 
 
 export default function NavigationBar() {
+  const auth = useAuth()
   return (
     <div className='homeNaveBar'>
       <div className='logoDiv'>
